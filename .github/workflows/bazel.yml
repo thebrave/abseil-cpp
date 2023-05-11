@@ -20,7 +20,9 @@ jobs:
       uses: jwlawson/actions-setup-bazel@v1
       
     - name: Build
+      working-directory: ${{github.workspace}}
       run: bazel build
 
     - name: Test
+      working-directory: ${{github.workspace}}
       run: bazel test
